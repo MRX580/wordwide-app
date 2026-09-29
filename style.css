@@ -1,0 +1,78 @@
+:root {
+  --bg: #f4f3ee;
+  --card: #ffffff;
+  --fg: #1b211e;
+  --muted: #5d6661;
+  --line: #dfe2dc;
+  --accent: #21473a;
+  --accent-soft: #e3ece6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1311;
+    --card: #181d1a;
+    --fg: #eef1ed;
+    --muted: #9aa49e;
+    --line: #2a322e;
+    --accent: #8fd3ad;
+    --accent-soft: #1d2b24;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  padding: 0 16px 64px;
+}
+main { max-width: 680px; margin: 0 auto; }
+a { color: var(--accent); text-underline-offset: 3px; }
+header.site {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0 8px;
+}
+header.site img { width: 40px; height: 40px; border-radius: 10px; }
+header.site a.home { font-weight: 700; font-size: 19px; color: var(--fg); text-decoration: none; }
+header.site nav { margin-left: auto; display: flex; gap: 16px; font-size: 15px; }
+header.site nav a { color: var(--muted); text-decoration: none; }
+header.site nav a[aria-current] { color: var(--fg); font-weight: 600; }
+h1 { font-size: 32px; line-height: 1.2; margin: 32px 0 8px; text-wrap: balance; }
+h2 { font-size: 22px; margin: 40px 0 12px; text-wrap: balance; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p { margin: 0 0 14px; max-width: 65ch; }
+.lead { color: var(--muted); font-size: 19px; }
+.muted { color: var(--muted); font-size: 15px; }
+.langs { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0 0; }
+.langs a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+section.lang { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 8px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.card p:last-child { margin-bottom: 0; }
+.hero { text-align: center; padding: 32px 0 8px; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px rgba(0, 0, 0, .15); }
+.hero h1 { margin-top: 20px; }
+.hero .lead { margin: 0 auto; }
+ul.features { padding-left: 20px; margin: 0 0 14px; max-width: 65ch; }
+ul.features li { margin-bottom: 6px; }
+.email { font-weight: 600; word-break: break-all; }
+footer { max-width: 680px; margin: 56px auto 0; color: var(--muted); font-size: 14px; }
